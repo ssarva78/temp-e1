@@ -19,11 +19,7 @@ public class RomanNumerals {
     }
 
     private static int prefixRomanLiteral(int remainder, StringBuilder bldr, int input, String literal) {
-        if (remainder >= input) {
-            bldr.append(literal);
-            return remainder - input;
-        }
-
-        return remainder;
+        bldr.append(literal);
+        return remainder - input;
     }
 }
