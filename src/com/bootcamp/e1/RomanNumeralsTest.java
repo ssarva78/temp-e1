@@ -102,4 +102,11 @@ public class RomanNumeralsTest {
         Assert.assertEquals("for 225", "CCXXV", RomanNumerals.toRoman(225));
         Assert.assertEquals("for 399", "CCCXCIX", RomanNumerals.toRoman(399));
     }
+
+    @Test
+    public void testFourHundredAndBelowFiveHundred() {
+        Assert.assertEquals("for 400", "CD", RomanNumerals.toRoman(400));
+        Assert.assertEquals("for 450", "CDL", RomanNumerals.toRoman(450));
+        Assert.assertEquals("for 499", "CDXCIX", RomanNumerals.toRoman(499));
+    }
 }
