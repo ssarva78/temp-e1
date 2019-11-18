@@ -13,20 +13,22 @@ public class RomanNumerals {
         if (remainder == 9)
             return "IX";
 
-        if (remainder >= 10) {
-            strbldr.append("X");
-            remainder -= 10;
-        }
-
-        if (remainder >= 5) {
-            strbldr.append("V");
-            remainder -= 5;
-        }
+        remainder = prefixRomanLiteral(remainder, strbldr, 10, "X");
+        remainder = prefixRomanLiteral(remainder, strbldr, 5, "V");
 
         for (int i = 1; i <= remainder; i++) {
             strbldr.append("I");
         }
 
         return strbldr.toString();
+    }
+
+    private static int prefixRomanLiteral(int remainder, StringBuilder bldr, int input, String literal) {
+        if (remainder >= input) {
+            bldr.append(literal);
+            return remainder - input;
+        }
+
+        return remainder;
     }
 }
