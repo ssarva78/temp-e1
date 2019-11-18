@@ -2,12 +2,13 @@ package com.bootcamp.e1;
 
 public class RomanNumberals {
 
-    public static String toRoman(int i) {
-        if (i == 2)
-            return "II";
-        else if (i == 3)
-            return "III";
+    public static String toRoman(int input) {
+        StringBuilder strbldr = new StringBuilder();
 
-        return "I";
+        for (int i = 1; i <= input; i++) {
+            strbldr.append("I");
+        }
+
+        return strbldr.toString();
     }
 }
