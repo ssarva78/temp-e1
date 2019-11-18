@@ -5,10 +5,17 @@ public class RomanNumerals {
     public static String toRoman(int input) {
         final int[] numbers = {10, 9, 5, 4, 1};
         final String[] literals = {"X", "IX", "V", "IV", "I"};
+
         StringBuilder strbldr = new StringBuilder();
 
         int remainder = input;
 
+        for (int i = 0; i < numbers.length; i ++) {
+            while (remainder >= numbers[i])
+                remainder = prefixRomanLiteral(remainder, strbldr, numbers[i], literals[i]);
+        }
+
+        /*
         while (remainder >= 10)
             remainder = prefixRomanLiteral(remainder, strbldr, 10, "X");
 
@@ -19,6 +26,7 @@ public class RomanNumerals {
         for (int i = 1; i <= remainder; i++) {
             strbldr.append("I");
         }
+         */
 
         return strbldr.toString();
     }
