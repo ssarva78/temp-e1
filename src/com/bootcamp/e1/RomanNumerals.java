@@ -3,8 +3,8 @@ package com.bootcamp.e1;
 public class RomanNumerals {
 
     public static String toRoman(int input) {
-        final int[] numbers = {40, 10, 9, 5, 4, 1};
-        final String[] literals = {"XC", "X", "IX", "V", "IV", "I"};
+        final int[] numbers = {100, 90, 50, 40, 10, 9, 5, 4, 1};
+        final String[] literals = {"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
         StringBuilder strbldr = new StringBuilder();
 
