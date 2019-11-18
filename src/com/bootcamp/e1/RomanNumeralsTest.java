@@ -45,4 +45,31 @@ public class RomanNumeralsTest {
         Assert.assertEquals("for 12", "XII", RomanNumerals.toRoman(12));
         Assert.assertEquals("for 13", "XIII", RomanNumerals.toRoman(13));
     }
+
+    @Test
+    public void testFourteen() {
+        Assert.assertEquals("for 14", "XIV", RomanNumerals.toRoman(14));
+    }
+
+    @Test
+    public void testFifteenToNineteen() {
+        Assert.assertEquals("for 15", "XV", RomanNumerals.toRoman(15));
+        Assert.assertEquals("for 16", "XVI", RomanNumerals.toRoman(16));
+        Assert.assertEquals("for 17", "XVII", RomanNumerals.toRoman(17));
+        Assert.assertEquals("for 18", "XVIII", RomanNumerals.toRoman(18));
+        Assert.assertEquals("for 19", "XIX", RomanNumerals.toRoman(19));
+    }
+
+    @Test
+    public void testTwentyAndBelowFourty() {
+        Assert.assertEquals("for 20", "XX", RomanNumerals.toRoman(20));
+        Assert.assertEquals("for 21", "XXI", RomanNumerals.toRoman(21));
+        Assert.assertEquals("for 24", "XXIV", RomanNumerals.toRoman(24));
+        Assert.assertEquals("for 25", "XXV", RomanNumerals.toRoman(25));
+        Assert.assertEquals("for 26", "XXVI", RomanNumerals.toRoman(26));
+        Assert.assertEquals("for 29", "XXIX", RomanNumerals.toRoman(29));
+        Assert.assertEquals("for 30", "XXX", RomanNumerals.toRoman(30));
+        Assert.assertEquals("for 39", "XXXIX", RomanNumerals.toRoman(39));
+    }
+
 }
