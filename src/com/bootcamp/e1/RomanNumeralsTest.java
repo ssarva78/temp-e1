@@ -59,6 +59,9 @@ public class RomanNumeralsTest {
         Assert.assertEquals("for 18", "XVIII", RomanNumerals.toRoman(18));
         Assert.assertEquals("for 19", "XIX", RomanNumerals.toRoman(19));
     }
-
+    @Test
+    public void testTwentyAndBelowFourty() {
+        Assert.assertEquals("for 20", "XX", RomanNumerals.toRoman(20));
+    }
 
 }
