@@ -10,6 +10,14 @@ public class RomanNumerals {
         if (remainder == 4)
             return "IV";
 
+        if (remainder == 9)
+            return "IX";
+
+        if (remainder >= 10) {
+            strbldr.append("X");
+            remainder -= 10;
+        }
+
         if (remainder >= 5) {
             strbldr.append("V");
             remainder -= 5;

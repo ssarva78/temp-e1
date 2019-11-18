@@ -26,12 +26,23 @@ public class RomanNumeralsTest {
     }
 
     @Test
-    public void testFive() {
+    public void testFiveToEight() {
         Assert.assertEquals("for 5", "V", RomanNumerals.toRoman(5));
+        Assert.assertEquals("for 6", "VI", RomanNumerals.toRoman(6));
+        Assert.assertEquals("for 7", "VII", RomanNumerals.toRoman(7));
+        Assert.assertEquals("for 8", "VIII", RomanNumerals.toRoman(8));
     }
 
     @Test
-    public void testSixSevenEight() {
-        Assert.assertEquals("for 6", "VI", RomanNumerals.toRoman(6));
+    public void testNine() {
+        Assert.assertEquals("for 9", "IX", RomanNumerals.toRoman(9));
+    }
+
+    @Test
+    public void testTenToThirteen() {
+        Assert.assertEquals("for 10", "X", RomanNumerals.toRoman(10));
+        Assert.assertEquals("for 11", "XI", RomanNumerals.toRoman(11));
+        Assert.assertEquals("for 12", "XII", RomanNumerals.toRoman(12));
+        Assert.assertEquals("for 13", "XIII", RomanNumerals.toRoman(13));
     }
 }
