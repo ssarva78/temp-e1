@@ -121,4 +121,11 @@ public class RomanNumeralsTest {
         Assert.assertEquals("for 900", "CM", RomanNumerals.toRoman(900));
         Assert.assertEquals("for 999", "CMXCIX", RomanNumerals.toRoman(999));
     }
+
+    @Test
+    public void testThousandAndAbove() {
+        Assert.assertEquals("for 1000", "M", RomanNumerals.toRoman(1000));
+        Assert.assertEquals("for 2000", "MM", RomanNumerals.toRoman(2000));
+        Assert.assertEquals("for 2019", "MMXIX", RomanNumerals.toRoman(2019));
+    }
 }
