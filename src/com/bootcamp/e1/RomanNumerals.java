@@ -15,19 +15,6 @@ public class RomanNumerals {
                 remainder = prefixRomanLiteral(remainder, strbldr, numbers[i], literals[i]);
         }
 
-        /*
-        while (remainder >= 10)
-            remainder = prefixRomanLiteral(remainder, strbldr, 10, "X");
-
-        remainder = prefixRomanLiteral(remainder, strbldr, 9, "IX");
-        remainder = prefixRomanLiteral(remainder, strbldr, 5, "V");
-        remainder = prefixRomanLiteral(remainder, strbldr, 4, "IV");
-
-        for (int i = 1; i <= remainder; i++) {
-            strbldr.append("I");
-        }
-         */
-
         return strbldr.toString();
     }
 
