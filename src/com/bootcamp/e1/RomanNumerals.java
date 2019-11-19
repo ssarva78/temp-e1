@@ -12,13 +12,13 @@ public class RomanNumerals {
 
         for (int i = 0; i < numbers.length; i ++) {
             while (remainder >= numbers[i])
-                remainder = prefixRomanLiteral(remainder, strbldr, numbers[i], literals[i]);
+                remainder = addRomanLiteral(remainder, strbldr, numbers[i], literals[i]);
         }
 
         return strbldr.toString();
     }
 
-    private static int prefixRomanLiteral(int remainder, StringBuilder bldr, int input, String literal) {
+    private static int addRomanLiteral(int remainder, StringBuilder bldr, int input, String literal) {
         bldr.append(literal);
         return remainder - input;
     }
