@@ -11,15 +11,15 @@ public class RomanNumerals {
         int remainder = input;
 
         for (int i = 0; i < numbers.length; i ++) {
-            while (remainder >= numbers[i])
-                remainder = addRomanLiteral(remainder, strbldr, numbers[i], literals[i]);
+            if (remainder < numbers[i])
+                continue;
+
+            int quotient = remainder / numbers[i];
+            strbldr.append(new String(new char[quotient]).replace("\0", literals[i]));
+            remainder %= numbers[i];
         }
 
         return strbldr.toString();
     }
 
-    private static int addRomanLiteral(int remainder, StringBuilder bldr, int input, String literal) {
-        bldr.append(literal);
-        return remainder - input;
-    }
 }
